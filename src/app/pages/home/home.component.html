@@ -1,0 +1,49 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-4">A large variety of <br>  beautiful clothes</h1>
+        <a routerLink="menu">ORDER NOW <i class="bi bi-arrow-down-right-square-fill"></i></a>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">How to get your clothes </h1>
+    <div class="row mt-5">
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>Choose</p>
+            </div>
+        </div>
+
+       <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>Fill the details</p>
+            </div>
+        </div>
+
+      <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>Purchase</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let order of orderData; index as i">
+                <div class="orderbox" *ngIf="i<=3" >
+                    <img src="{{ order.pic}} " />
+                    
+                        <h1>{{ order.name }}</h1>
+                        <p>{{ order.disponibility }}</p>
+                        <p>{{ order.price | currency : 'USD' }}</p>
+                    
+                    
+                </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">View More<i class="bi bi-plus-circle-fill"></i></a>
+</div>

@@ -1,0 +1,61 @@
+
+#form {
+    border-color: #ccc;
+    border-width: 1px;
+    /*background-image: url('https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80');
+    background-size: cover;*/
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);    
+    text-align: center;
+    width: 40%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -1em 0 .8em #ccc ;
+    
+}
+.formulaire {
+    padding-top: 50px;
+}
+.submit-button{
+    background-color: #000000;
+    color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left:24px ;
+    padding-right: 24px;
+    font-size: 18px;
+    border: none;
+    
+
+}
+input{
+    font-size: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 36px; 
+    box-shadow: 2px 5px 5px rgb(180, 180, 180);
+    border: none;
+}
+  ::placeholder {
+    font-size: 15px;
+    color: rgb(168, 172, 177);
+}
+.signup {
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+@media screen and (max-width: 1024px)
+{
+    input {
+        max-width: 100%;
+    }
+    .submit-button {
+        max-width: 100%;
+    }
+}
+
+

@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "id":1,
+            "name":"dia",
+            "email":"dia@gmail.com",
+            "password":"dia",
+            "tel":"29852207"
+        },
+        {
+            "id":2,
+            "name":"adda",
+            "email":"adda@gmail.com",
+            "password":"adda",
+            "tel":"29852207"
+        },
+        {
+            "id":3,
+            "name":"diadda",
+            "email":"diadda@gmail.com",
+            "password":"diadda",
+            "tel":"29852207"
+        }
+    ]
+}

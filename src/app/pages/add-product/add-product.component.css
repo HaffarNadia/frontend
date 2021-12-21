@@ -1,0 +1,18 @@
+.container {
+    width: 50%;
+    margin-top: 100px;
+ 
+}
+input {
+    margin-top: 10px;
+}
+select , label {
+    margin-top: 10px;
+}
+.btn-add {
+    background-color: #000;
+    color: #fff;
+    float: right;
+    margin-top: 10px;
+    padding: 5px 30px;
+}
