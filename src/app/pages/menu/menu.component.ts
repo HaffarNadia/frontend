@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderDetailsService } from 'src/app/services/order-details.service';
+import {DomSanitizer, SafeUrl , SafeResourceUrl} from '@angular/platform-browser';
 
 
 @Component({
@@ -8,8 +9,11 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
-  constructor(private service:OrderDetailsService) { }
+ 
+  
+  constructor(private service:OrderDetailsService, private sanitizer:DomSanitizer) { 
+   
+  }
   orderData:any;
 
   ngOnInit(): void {
@@ -18,6 +22,9 @@ export class MenuComponent implements OnInit {
         console.log(res,"res==>");
         this.orderData=res.data;
     });
+    
+
+
   }
 
 }

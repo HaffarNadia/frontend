@@ -19,5 +19,9 @@ export class OrderDetailsService {
   addProduct(data:any):Observable<any> {
     return this._http.post(`${this.apiUrl}`,data);
   }
+  deleteProduct(data:any):Observable<any> {
+    return this._http.delete(`${this.apiUrl}`,data);
+  }
+
   
 }

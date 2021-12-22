@@ -1,4 +1,9 @@
 <div class="container">
+   <!--error msg-->
+    <div *ngIf="errormessage" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ errormessage }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
              <h1>Add new product</h1>
              <form [formGroup]="productForm" (ngSubmit)="productSubmit()">
                <fieldset>
@@ -11,22 +16,27 @@
                     
                          <input type="text" class="form-control" formControlName="price" id="price" placeholder="Enter price ">
                     </div>
-                    
+                  
+                   
                     <div class="form-group">
                     
                         <div class="input-group mb-3">
                             <select class="form-select" id="inputGroupSelect02" formControlName="category">
-                            <option selected>Choose...</option>
-                            <option value="1" >Women</option>
-                            <option value="2" >Men</option>
-                            <option value="3" >Kids</option>
+                                <option selected value="">Choose...</option>
+                                <option value="women" >Women</option>
+                                <option value="men" >Men</option>
+                                <option value="kids" >Kids</option>
+                                <option value="beauty" >Beauty</option>
                             </select>
                             <label class="input-group-text" for="inputGroupSelect02">Category</label>
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="disponibility" formControlName="Disponibility"> Disponibility: 1</label>
+                   </div>
+                    <div class="form-group">
                         
-                        <input type="file" class="form-control-file"formControlName="pic" id="fichier">
+                        <input type="file" class="form-control-file" formControlName="pic" target="_blank" id="fichier">
                     </div>
                     <div class="form-group">
                         
