@@ -3,13 +3,17 @@
         <div class="btn-add"><button class="btn btn-dark" routerLink="/add-product">Add Product<i class="bi bi-plus-circle-fill"></i></button></div>
         <div class="col-lg-4" *ngFor="let order of orderData">
             <div class="orderbox mt-3 mb-3" >
+                <div *ngIf="successmessage" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ successmessage }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <img src="{{order.pic}}">
                 <h1>{{ order.name }}</h1>
                 <p>{{ order.disponibility }} <br> {{ order.price | currency:'USD' }}</p>
                 <a class="buybtn" [routerLink]="['/menu',order.id]">Shop Now<i class="bi bi-cart-plus-fill"></i></a>
                 <div class="updel-btn">
                     <button class="update-btn" type="button" ><i class="bi bi-pencil-fill"></i></button>
-                    <button class="delete-btn" type="button" ><i class="bi bi-trash-fill"></i></button>
+                    <button class="delete-btn" type="button" (click)="deleteP(order.id)" ><i class="bi bi-trash-fill"></i></button>
                 </div>
                 
             </div>

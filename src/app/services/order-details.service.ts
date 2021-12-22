@@ -15,12 +15,14 @@ export class OrderDetailsService {
   getAllProducts():Observable<any> {
      return this._http.get(`${this.apiUrl}`);
   }
-  
+  //create product
   addProduct(data:any):Observable<any> {
     return this._http.post(`${this.apiUrl}`,data);
   }
-  deleteProduct(data:any):Observable<any> {
-    return this._http.delete(`${this.apiUrl}`,data);
+  //delete product
+  deleteProduct(id:any):Observable<any> {
+    let ids = id;
+    return this._http.delete(`${this.apiUrl}/${ids}`);
   }
 
   

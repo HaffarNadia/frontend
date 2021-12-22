@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
    
   }
   orderData:any;
+  successmessage:any;
 
   ngOnInit(): void {
     this.service.getAllProducts().subscribe((res)=>{
@@ -22,9 +23,17 @@ export class MenuComponent implements OnInit {
         console.log(res,"res==>");
         this.orderData=res.data;
     });
-    
+  
+  }
+  //delete product 
+  deleteP(id:any) {
+    console.log(id,'delete id=>');
+    this.service.deleteProduct(id).subscribe((res)=>{
 
-
+        console.log(res,'res=>');
+        this.successmessage = res.message;
+        window.location.reload();
+    });
   }
 
 }
