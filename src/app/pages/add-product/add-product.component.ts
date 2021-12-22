@@ -10,6 +10,7 @@ export class AddProductComponent implements OnInit {
  
   constructor(private service:OrderDetailsService) { }
   errormessage:any;
+  successmessage:any;
   ngOnInit(): void {
   }
  productForm = new FormGroup({
@@ -27,6 +28,7 @@ export class AddProductComponent implements OnInit {
       this.service.addProduct(this.productForm.value).subscribe((res)=>{
           console.log(res, 'res=>');
           this.productForm.reset();
+          this.successmessage = res.message;
       })
     } else {
        this.errormessage = 'all fileds are required';

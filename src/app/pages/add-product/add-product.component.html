@@ -4,8 +4,13 @@
         <strong>{{ errormessage }}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+    <div *ngIf="successmessage" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{ successmessage }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
              <h1>Add new product</h1>
-             <form [formGroup]="productForm" (ngSubmit)="productSubmit()">
+             <form [formGroup]="productForm" (ngSubmit)="productSubmit()" nctype="multipart/form-data" method="post">
                <fieldset>
                     <div class="form-group">
                     
@@ -36,7 +41,7 @@
                    </div>
                     <div class="form-group">
                         
-                        <input type="file" class="form-control-file" formControlName="pic" target="_blank" id="fichier">
+                        <input type="file"name="image" class="form-control-file" formControlName="pic" target="_blank"  accept="image/*">
                     </div>
                     <div class="form-group">
                         
